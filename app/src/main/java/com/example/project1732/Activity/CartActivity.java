@@ -1,10 +1,12 @@
 package com.example.project1732.Activity;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewOutlineProvider;
+import android.widget.Button;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,13 +22,17 @@ public class CartActivity extends BaseActivity {
     private RecyclerView.Adapter adapter;
     private ManagmentCart managmentCart;
     private double tax;
+    private Button dir;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityCartBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        binding.btnOrdenar.setOnClickListener(v -> {
+            Intent intent =new Intent(CartActivity.this,DireccionActivity.class);
+            startActivity(intent);
+        });
         managmentCart=new ManagmentCart(this);
 
         setVariable();

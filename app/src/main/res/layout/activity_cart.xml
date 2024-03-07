@@ -199,7 +199,7 @@
             </eightbitlab.com.blurview.BlurView>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button2"
+                android:id="@+id/btnOrdenar"
                 style="@android:style/Widget.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
